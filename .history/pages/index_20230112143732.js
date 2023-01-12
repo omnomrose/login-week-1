@@ -16,20 +16,6 @@ export default function Home() {
     username: ''
   })
 
-  const CheckLogin = () => {
-    console.log(formData.firstName);
-    console.log(formData);
-
-    if(formData.username !== null){
-      router.push({
-        pathname: './counter',
-        query: {
-          username: formData.username
-        }
-      })
-    }
-  }
-
   return (
     <>
       <Head>
@@ -47,7 +33,6 @@ export default function Home() {
         name="first"
         pattern="[A-Z]{1}[a-z]{2,10}"
         title="The first letter should be uppercase"
-        onChange={(e => setFormData({...formData, firstName: e.target.value}))}
         />
 
         <label>Username:</label>
@@ -59,10 +44,9 @@ export default function Home() {
          required
          minLength="5"
          maxLength="10"
-         onChange={(e => setFormData({...formData, username: e.target.value}))}
          />
 
-         <button type="submit" onClick={() => CheckLogin()}>Submit</button>
+         <button>Submit</button>
       </main>
     </>
   )

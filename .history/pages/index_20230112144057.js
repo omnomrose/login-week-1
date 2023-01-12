@@ -19,15 +19,6 @@ export default function Home() {
   const CheckLogin = () => {
     console.log(formData.firstName);
     console.log(formData);
-
-    if(formData.username !== null){
-      router.push({
-        pathname: './counter',
-        query: {
-          username: formData.username
-        }
-      })
-    }
   }
 
   return (
