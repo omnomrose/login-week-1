@@ -1,3 +1,8 @@
+:root{
+  --bg-color:#7A82AB;
+  --text-color: #EBF2FA;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -5,6 +10,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background-color: var(--bg-color);
 }
 
 .description {
